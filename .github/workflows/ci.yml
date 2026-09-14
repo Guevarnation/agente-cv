@@ -1,0 +1,40 @@
+name: CI
+
+on:
+  push: { branches: [main] }
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: oven-sh/setup-bun@v2
+        with: { bun-version: 1.4.2 }
+      - run: bun install --frozen-lockfile
+      - run: bun run typecheck
+      - run: bun run lint
+      # The whole suite runs against a deterministic mock model: no provider credentials, no spend.
+      - run: bun test
+      - run: docker build -t cv-agent:ci .
+
+  # Answer quality costs money, so it runs on demand with a repository secret and publishes the report.
+  eval:
+    if: github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+    env:
+      AGENT_MODEL: anthropic:claude-sonnet-5
+      ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+      LOG_LEVEL: silent
+    steps:
+      - uses: actions/checkout@v5
+      - uses: oven-sh/setup-bun@v2
+        with: { bun-version: 1.4.2 }
+      - run: bun install --frozen-lockfile
+      - run: bun run eval
+      - if: always()
+        run: cat evals/report.md >> "$GITHUB_STEP_SUMMARY"
+      - if: always()
+        uses: actions/upload-artifact@v4
+        with: { name: eval-report, path: evals/report.md }

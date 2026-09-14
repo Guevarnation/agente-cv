@@ -1,0 +1,11 @@
+services:
+  cv-agent:
+    build: .
+    ports:
+      - "3000:3000"
+    environment:
+      AGENT_MODEL: ${AGENT_MODEL:-mock:echo}
+      ANTHROPIC_API_KEY: ${ANTHROPIC_API_KEY:-}
+      AGENT_API_KEY: ${AGENT_API_KEY:-}
+      LOG_LEVEL: ${LOG_LEVEL:-info}
+    restart: "no"

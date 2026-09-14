@@ -1,0 +1,3 @@
+[test]
+# Loaded before any test file, so the config module never sees .env values during tests.
+preload = ["./tests/setup.ts"]

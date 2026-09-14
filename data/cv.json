@@ -1,0 +1,430 @@
+{
+  "meta": {
+    "version": "2026-09-13",
+    "privacyNote": "El teléfono personal se excluye deliberadamente de este repositorio público. Los canales de contacto publicados son correo, LinkedIn, GitHub y sitio web."
+  },
+  "profile": {
+    "fullName": "Eugenio Guevara",
+    "headline": {
+      "es": "Desarrollador Full Stack enfocado en backend e IA aplicada",
+      "en": "Full-stack engineer focused on backend and applied AI"
+    },
+    "location": "Monterrey, Nuevo León, México",
+    "yearsOfExperience": 3,
+    "contact": {
+      "email": "guevaraeu1@gmail.com",
+      "linkedin": "https://linkedin.com/in/eugenio-guevara",
+      "github": "https://github.com/guevarnation",
+      "website": "https://eugenioguevara.com"
+    }
+  },
+  "summary": {
+    "es": "Desarrollador full-stack con más de 3 años construyendo servicios backend en producción con Node.js y TypeScript para startups y agencias de software. Disenia APIs REST escalables y se hace cargo de CI/CD y despliegues cloud-native de extremo a extremo. AWS Certified Solutions Architect. Llevo a producción un pipeline RAG con 90% de precisión en FinanceBench. Actualmente CTO de una plataforma de preventa inmobiliaria en México.",
+    "en": "Full-stack engineer with 3+ years building production backend services with Node.js and TypeScript for startups and software agencies. Designs scalable REST APIs and owns CI/CD and cloud-native deployments end to end. AWS Certified Solutions Architect. Shipped a production RAG pipeline at 90% FinanceBench accuracy. Currently CTO of a real estate presale platform in México."
+  },
+  "certifications": [
+    {
+      "name": "AWS Certified Solutions Architect – Associate (SAA-C03)",
+      "issuer": "Amazon Web Services",
+      "date": "2026-03",
+      "dateLabel": {
+        "es": "Marzo 2026",
+        "en": "March 2026"
+      }
+    },
+    {
+      "name": "Certificado en Fintech y Ciencia de Datos",
+      "issuer": "Instituto de Estudios Bursatiles (IEB), Madrid",
+      "date": "2023-summer",
+      "dateLabel": {
+        "es": "Verano 2023",
+        "en": "Summer 2023"
+      },
+      "distinction": {
+        "es": "1er lugar del programa",
+        "en": "1st place in the program"
+      }
+    }
+  ],
+  "experience": [
+    {
+      "id": "yeyar",
+      "role": {
+        "es": "CTO y Desarrollador Full Stack",
+        "en": "CTO & Full Stack Developer"
+      },
+      "company": "YEYAR",
+      "companyDescription": {
+        "es": "Buscador de oportunidades de inversión inmobiliaria (preventa)",
+        "en": "Real estate presale investment opportunity finder"
+      },
+      "location": "Monterrey, México",
+      "start": "2024-03",
+      "end": null,
+      "current": true,
+      "periodLabel": {
+        "es": "Marzo 2024 – Presente",
+        "en": "Mar. 2024 – Present"
+      },
+      "highlights": {
+        "es": [
+          "Diseñé y lance una plataforma full-stack de preventa inmobiliaria con Next.js, Hono, Drizzle y Neon Postgres, más una app companion en React Native (Expo) para iOS y Android: mapas interactivos, dashboards para inversionistas, reservas in-app, cobros con Stripe y alertas push. Calificación 4.2+ en tiendas.",
+          "Diseñé el esquema Postgres y la capa de datos en Drizzle sobre Neon, y lidere la migración de AWS EC2/Docker a una arquitectura serverless en Vercel + Neon, reduciendo el overhead operativo y manteniendo CI en GitHub Actions y despliegues sin downtime en Vercel."
+        ],
+        "en": [
+          "Architected and shipped a full-stack real estate presale platform (Next.js, Hono, Drizzle, Neon Postgres) plus a React Native (Expo) companion app on iOS and Android: interactive maps, investor dashboards, in-app reservations, Stripe billing and push alerts, at a 4.2+ store rating.",
+          "Designed the Postgres schema and Drizzle data layer on Neon, and led the migration from AWS EC2/Docker to a serverless Vercel + Neon architecture, cutting ops overhead while keeping CI on GitHub Actions and zero-downtime deploys on Vercel."
+        ]
+      },
+      "stack": [
+        "Next.js",
+        "Hono",
+        "Drizzle",
+        "Neon Postgres",
+        "React Native",
+        "Expo",
+        "Stripe",
+        "Clerk",
+        "Pusher",
+        "Google Maps",
+        "Turborepo",
+        "Bun",
+        "Vercel",
+        "GitHub Actions",
+        "AWS EC2",
+        "Docker"
+      ],
+      "deepDive": {
+        "platform": {
+          "es": "Equipo de ingeniería de dos personas: Eugenio (CTO) y un ingeniero mas. Monorepo en Turborepo con workspaces de Bun: una plataforma para inversionistas en Next.js, una app de administración en Next.js con la API en Hono y la capa de datos en Drizzle, y una app móvil en Expo (React Native), compartiendo paquetes para el esquema de Drizzle (44 migraciones SQL sobre Neon Postgres), UI, tipos, esquemas, hooks y stores. Autenticación con Clerk en web, en la API de Hono y en Expo (incluyendo inicio de sesión con Google). Stripe maneja reservas y suscripciones, con una tabla de eventos procesados que deduplica webhooks siguiendo las buenas prácticas de Stripe. Pusher impulsa el chat en tiempo real; Google Maps en web y react-native-maps en móvil renderizan los mapas de propiedades; la app móvil usa notificaciones push, ubicación, haptics y actualizaciones OTA de Expo. Vercel Blob almacena archivos y Resend envia correos transaccionales. Alojado en Vercel, con GitHub Actions corriendo typecheck, pruebas y lint por paquete (ejecuciones solo de lo afectado en Turborepo con cache compartida).",
+          "en": "Engineering team of two: Eugenio (CTO) and one other engineer. Monorepo on Turborepo with Bun workspaces: a Next.js investor platform, a Next.js admin app with the Hono API and the Drizzle data layer, and an Expo (React Native) mobile app, sharing packages for the Drizzle schema (44 SQL migrations on Neon Postgres), UI, types, schemas, hooks and stores. Authentication with Clerk across web, the Hono API and Expo (including Google sign-in). Stripe handles reservations and subscription billing, with a processed-events table that deduplicates webhooks following Stripe's best practices. Pusher powers real-time chat; Google Maps on web and react-native-maps on mobile render the property maps; the mobile app uses Expo push notifications, location, haptics and over-the-air updates. Vercel Blob stores files and Resend sends transactional email. Hosted on Vercel, with GitHub Actions running typecheck, tests and lint per package (Turborepo affected-only runs with a shared cache)."
+        }
+      }
+    },
+    {
+      "id": "semnexus",
+      "role": {
+        "es": "Desarrollador Full Stack",
+        "en": "Full Stack Developer"
+      },
+      "company": "SEM Nexus",
+      "companyDescription": {
+        "es": "Agencia de desarrollo de software y marketing de apps",
+        "en": "Software development & app marketing agency"
+      },
+      "location": {
+        "es": "Nueva York, EE.UU. (remoto)",
+        "en": "New York, US (remote)"
+      },
+      "start": "2024-06",
+      "end": "2026-07",
+      "current": false,
+      "periodLabel": {
+        "es": "Junio 2024 – Julio 2026",
+        "en": "June 2024 – Jul. 2026"
+      },
+      "highlights": {
+        "es": [
+          "Lidere un equipo de 3 ingenieros para diseñar y desplegar un pipeline RAG agentico en producción sobre un backend Node.js/TypeScript, con ingesta bajo demanda de reportes de SEC EDGAR hacia pgvector y recuperación híbrida (vectorial + texto completo), alcanzando 90% de precisión en FinanceBench.",
+          "Construi un sistema de monitoreo y notificación en tiempo real que rastrea más de 1000 eventos en vivo en multiples plataformas, con scraping concurrente y rotación de proxies; refine la lógica de comparación para subir la tasa de exito de 72% a 98% y reduje el retraso de notificación en 30 segundos.",
+          "Diseñé la API REST pública (v1) de la plataforma en TypeScript sobre route handlers de Next.js, con autenticación por API key, limites de tasa por nivel sobre Upstash Redis, medición de uso por llave y cache HTTP, sirviendo datos de resultados, estimaciones, transcripciones, noticias y reportes.",
+          "Construi una plataforma de administración en Next.js con una API REST en Hono (validada con Zod, autenticada con Clerk) sobre Drizzle ORM, contenerizada con Docker y desplegada en AWS EC2.",
+          "Construi Digielo, una app social basada en ubicación, con un backend Node.js/TypeScript (NestJS) y un frontend móvil en Ionic/Angular: busqueda geoespacial con PostgreSQL/PostGIS (consultas por radio sobre columnas geography con índices GIST), un sistema de chat en tiempo real y verificación KYC con Persona."
+        ],
+        "en": [
+          "Led a team of 3 engineers to design and deploy a production agentic RAG pipeline on a Node.js/TypeScript backend, with on-demand ingestion of SEC EDGAR filings into pgvector and hybrid vector + full-text retrieval, achieving 90% accuracy on FinanceBench.",
+          "Built a real-time monitoring and notification system tracking 1000+ live events across multiple platforms with concurrent scraping and rotating proxies; refined comparison logic to raise the success rate from 72% to 98% and cut notification delay by 30s.",
+          "Designed the platform's public REST API (v1) in TypeScript on Next.js route handlers, with API-key authentication, tiered rate limiting on Upstash Redis, per-key usage metering and HTTP caching, serving earnings, estimates, transcripts, news and filings data.",
+          "Built an admin platform on Next.js with a Hono REST API (Zod-validated, Clerk-authenticated) over Drizzle ORM, containerized with Docker and deployed on AWS EC2.",
+          "Built Digielo, a location-based social app, with a Node.js/TypeScript (NestJS) backend and an Ionic/Angular mobile frontend: PostgreSQL/PostGIS geospatial search (radius queries on GIST-indexed geography columns), a real-time chat system and Persona-based KYC verification."
+        ]
+      },
+      "stack": [
+        "Node.js",
+        "TypeScript",
+        "Next.js",
+        "Hono",
+        "Nest.js",
+        "Vercel AI SDK",
+        "LangChain",
+        "pgvector",
+        "PostgreSQL",
+        "PostGIS",
+        "Prisma",
+        "Drizzle",
+        "Supabase",
+        "Upstash Redis",
+        "Trigger.dev",
+        "Clerk",
+        "Docker",
+        "AWS EC2",
+        "RAG",
+        "SEC EDGAR",
+        "Socket.IO",
+        "GCP"
+      ],
+      "deepDive": {
+        "aiFinanceAnalyst": {
+          "es": "EarningsWave, el analista financiero con IA de SEM Nexus (oct. 2024 – abr. 2025): Eugenio estuvo a cargo de un equipo de 3 ingenieros (el mismo más otros dos) y es autor de la mayor parte del código. RAG agentico sobre Claude 3.7 Sonnet de Anthropic a traves del Vercel AI SDK: alrededor de una docena de herramientas declaradas con la API de tools del SDK, que el modelo decide cuando invocar: busqueda de empresa y CIK, busqueda y lectura de reportes de la SEC, tablas cacheadas de estado de resultados, balance, flujo de efectivo y resultado integral, resultados trimestrales, dividendos, precios en vivo e historicos, noticias, articulos completos y transcripciones de llamadas de resultados. Los reportes llegan en vivo desde SEC EDGAR (submissions de data.sec.gov por CIK) a traves de una cola de peticiones en Redis que respeta los limites de tasa de la SEC. La ingesta es bajo demanda: la primera vez que se pide un reporte, su HTML se limpia conservando las tablas financieras intactas, se fragmenta respetando las tablas, se vectoriza con text-embedding-3-small de OpenAI y se guarda en pgvector sobre Postgres (Supabase, con Prisma para los datos relacionales) mediante el PGVectorStore de LangChain; desde entonces queda en cache y se comparte entre todos los usuarios, así que las siguientes preguntas van directo al almacen vectorial. La recuperación es híbrida: similitud coseno más una consulta de texto completo de Postgres ordenada con ts_rank, combinadas y deduplicadas. El resumen de transcripciones se delega a GPT-4o-mini para ahorrar tokens, y un job de Trigger.dev cada hora mantiene sincronizado el calendario de resultados. El frontend en Next.js transmite la respuesta en streaming y muestra los reportes citados como fuentes clicables; una API REST pública v1 con API keys, limites de tasa por nivel y medición de uso expone los mismos datos. Evaluado sobre el conjunto abierto de FinanceBench de 150 preguntas por una persona comparando cada respuesta del sistema RAG contra las respuestas oficiales de FinanceBench; la precisión, contada como respuestas correctas entre el total, fue de 90%.",
+          "en": "EarningsWave, the AI finance analyst at SEM Nexus (Oct. 2024 – Apr. 2025): Eugenio led a 3-engineer team (himself and two engineers) and wrote most of the code. Agentic RAG on Anthropic's Claude 3.7 Sonnet through the Vercel AI SDK: about a dozen tools declared through the SDK's tools API, which the model decides when to call: company and CIK lookup, SEC filing search and retrieval, cached income statement, balance sheet, cash flow and comprehensive income tables, earnings, dividends, live and historical prices, news, full articles and earnings-call transcripts. Filings come live from SEC EDGAR (data.sec.gov submissions by CIK) through a Redis-backed request queue that respects SEC rate limits. Ingestion is on demand: the first time a filing is requested, its HTML is cleaned with the financial tables kept intact, chunked table-aware, embedded with OpenAI text-embedding-3-small and stored in pgvector on Postgres (Supabase, with Prisma for the relational data) through LangChain's PGVectorStore; from then on it is cached and shared by every user, so later questions hit the vector store directly. Retrieval is hybrid: cosine similarity plus a Postgres full-text query ranked with ts_rank, merged and deduplicated. Transcript summarization is offloaded to GPT-4o-mini to save tokens, and an hourly Trigger.dev job keeps the earnings calendar in sync. The Next.js frontend streams the answer and renders cited filings as clickable sources; a public v1 REST API with API keys, tiered rate limits and usage metering exposes the same data. Evaluated on the 150-question open FinanceBench set by a person comparing each answer of the RAG system against the official FinanceBench answers; accuracy, counted as correct answers over total questions, was 90%."
+        },
+        "digielo": {
+          "es": "Digielo (oct. 2025 – abr. 2026, construida en SEM Nexus): app social basada en ubicación. Backend en NestJS (sobre Express) con TypeORM sobre PostgreSQL + PostGIS. Usuarios y eventos guardan una columna geography(Point, 4326) con índice GIST; las busquedas de proximidad usan ST_DWithin para una Hello-Zone fija de 150 pies (usuarios y eventos cercanos) y una Hot-Zone configurable de 150 a 2000 pies (eventos), con actualizaciones de ubicación en vivo por un gateway de Socket.IO. El chat en tiempo real corre sobre salas de Socket.IO con handshake autenticado por JWT e indicadores de escritura; un servicio con Gemini 2.5 Flash genera el inicio de conversación con IA cuando dos usuarios hacen match y resume los tests de personalidad durante el onboarding. La verificación de identidad integra Persona (creación de inquiries, consulta de estado y webhooks verificados con HMAC-SHA256). Las notificaciones push van por Firebase Cloud Messaging con prioridad APNS y sonido por plataforma, y la lista de notificaciones persiste en Postgres. Desplegada en Google Cloud (GCP): un balanceador HTTPS con certificado administrado por Google enruta a una VM de Compute Engine que corre la API, el admin y la landing como servicios de Docker Compose desde Artifact Registry, con actualizaciones automaticas via Watchtower. Eugenio es autor principal tanto del backend en NestJS como de la app móvil en Ionic/Angular.",
+          "en": "Digielo (Oct. 2025 – Apr. 2026, built at SEM Nexus): location-based social app. Backend in NestJS (on Express) with TypeORM on PostgreSQL + PostGIS. Users and events store a geography(Point, 4326) column with a GIST index; proximity lookups use ST_DWithin for a fixed 150 ft Hello-Zone (nearby users and events) and a configurable 150 to 2000 ft Hot-Zone (events), with live location updates over a Socket.IO gateway. Real-time chat runs on Socket.IO rooms with JWT-authenticated handshakes and typing indicators; a Gemini 2.5 Flash service generates the AI conversation starter when two users match and summarizes personality-test results during onboarding. Identity verification integrates Persona (inquiry creation, status polling and webhooks verified with HMAC-SHA256). Push notifications go through Firebase Cloud Messaging with per-platform APNS priority and sound settings, with the notification list persisted in Postgres. Deployed on Google Cloud (GCP): an HTTPS load balancer with a Google-managed certificate routes to a Compute Engine VM that runs the API, admin and landing page as Docker Compose services pulled from Artifact Registry, with Watchtower auto-updates. Eugenio built both the NestJS backend and the Ionic/Angular mobile app, and is the main contributor to both repositories."
+        }
+      }
+    },
+    {
+      "id": "insertbid",
+      "role": {
+        "es": "Desarrollador Full Stack (Contrato)",
+        "en": "Full Stack Developer (Contract)"
+      },
+      "company": "InsertBid",
+      "companyDescription": {
+        "es": "Marketplace de coleccionables de gaming",
+        "en": "Gaming collectibles marketplace"
+      },
+      "location": {
+        "es": "Houston, TX (remoto)",
+        "en": "Houston, TX (remote)"
+      },
+      "start": "2025-03",
+      "end": "2025-08",
+      "current": false,
+      "periodLabel": {
+        "es": "Marzo 2025 – Agosto 2025",
+        "en": "Mar. 2025 – Aug. 2025"
+      },
+      "highlights": {
+        "es": [
+          "Construi el motor de pujas en tiempo real para un marketplace de coleccionables de gaming estilo eBay, incluyendo un sistema de bloqueo de concurrencia para evitar condiciones de carrera en pujas simultaneas, integrado con Stripe para pagos.",
+          "Implemente optimización SEO asistida por IA y mejore el rendimiento web, reduciendo el tamaño del bundle de JavaScript y subiendo los puntajes de Lighthouse para cargas más rapidas y mejor posicionamiento organico."
+        ],
+        "en": [
+          "Built the real-time bidding engine for an eBay-style gaming collectibles marketplace, including a concurrency lock system to prevent race conditions on simultaneous bids, integrated with Stripe for payments.",
+          "Implemented AI-assisted SEO optimization and improved web performance, reducing JavaScript bundle size and raising Lighthouse scores for faster page loads and stronger organic ranking."
+        ]
+      },
+      "stack": [
+        "TypeScript",
+        "MongoDB",
+        "Stripe",
+        "SEO",
+        "Lighthouse"
+      ]
+    },
+    {
+      "id": "nudgem",
+      "role": {
+        "es": "Desarrollador Full Stack",
+        "en": "Full Stack Developer"
+      },
+      "company": "Nudgem",
+      "companyDescription": {
+        "es": "SaaS B2B para marcas de eCommerce",
+        "en": "B2B SaaS for eCommerce brands"
+      },
+      "location": {
+        "es": "Nueva York, EE.UU. (remoto)",
+        "en": "New York, US (remote)"
+      },
+      "start": "2023-04",
+      "end": "2024-02",
+      "current": false,
+      "periodLabel": {
+        "es": "Abril 2023 – Febrero 2024",
+        "en": "April 2023 – Feb. 2024"
+      },
+      "highlights": {
+        "es": [
+          "Desarrolle aplicaciones móviles personalizadas para tiendas Shopify usando Ionic con un backend en Nest.js, integrando las APIs GraphQL Storefront y Admin de Shopify para catalogo de productos, inventario y ordenes."
+        ],
+        "en": [
+          "Developed custom mobile apps for Shopify stores using Ionic with a Nest.js backend, integrating Shopify's GraphQL Storefront and Admin APIs for product catalog, inventory and order data."
+        ]
+      },
+      "stack": [
+        "Ionic",
+        "Nest.js",
+        "Shopify GraphQL",
+        "TypeScript"
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "id": "polymarket-engine",
+      "name": "Polymarket Execution Engine",
+      "stack": [
+        "Go",
+        "AWS EC2 Graviton",
+        "WebSockets",
+        "systemd",
+        "AWS Secrets Manager"
+      ],
+      "description": {
+        "es": "Servicio de baja latencia en Go que ingiere los streams del libro de ordenes CLOB de Polymarket via WebSocket en más de 50 mercados usando goroutines, con controles de riesgo. Desplegado como binario estático ARM64 en AWS EC2 Graviton, con Secrets Manager mediante IAM Instance Profiles y auto-recuperación con systemd.",
+        "en": "Low-latency Go service ingesting Polymarket's CLOB order-book streams via WebSocket across 50+ markets with goroutines and risk controls. Deployed as a static ARM64 binary on AWS EC2 Graviton with Secrets Manager (IAM Instance Profiles) and systemd auto-recovery."
+      }
+    },
+    {
+      "id": "cv-agent",
+      "name": "CV Agent (este proyecto)",
+      "stack": [
+        "Bun",
+        "TypeScript",
+        "Hono",
+        "Vercel AI SDK",
+        "Zod",
+        "Open Responses",
+        "Docker",
+        "Railway",
+        "GitHub Actions"
+      ],
+      "description": {
+        "es": "Agente conversacional que responde preguntas sobre este perfil profesional. Expone un endpoint compatible con el protocolo abierto Open Responses, con streaming SSE, el CV completo en contexto, una única herramienta que consulta GitHub en vivo y una batería de evaluaciones automatizadas. Construido para el Reto IA Banorte.",
+        "en": "Conversational agent that answers questions about this professional profile. Exposes an endpoint compatible with the Open Responses open protocol, with SSE streaming, the full CV in context, a single tool that queries GitHub live, and an automated evaluation suite. Built for the Banorte AI Challenge."
+      }
+    }
+  ],
+  "education": [
+    {
+      "institution": "Universidad de Monterrey (UDEM)",
+      "degree": {
+        "es": "Licenciatura en Economía",
+        "en": "B.A. in Economics"
+      },
+      "start": "2019",
+      "end": "2025",
+      "periodLabel": {
+        "es": "2019 – 2025",
+        "en": "2019 – 2025"
+      }
+    }
+  ],
+  "skills": {
+    "languages": [
+      "TypeScript",
+      "Python",
+      "Go",
+      "SQL"
+    ],
+    "frameworks": [
+      "Node.js",
+      "Hono",
+      "Nest.js",
+      "Express",
+      "Bun",
+      "Next.js",
+      "React",
+      "React Native",
+      "Expo",
+      "Ionic",
+      "Angular",
+      "Socket.IO",
+      "Chi"
+    ],
+    "cloudAndData": [
+      "AWS (EC2, S3, Lambda, EventBridge, VPC, IAM; SAA-C03)",
+      "GCP (Compute Engine, HTTPS Load Balancer, Artifact Registry)",
+      "Firebase Cloud Messaging",
+      "Docker",
+      "Terraform",
+      "GitHub Actions",
+      "Neon",
+      "Supabase",
+      "Upstash Redis",
+      "Vercel",
+      "PostgreSQL",
+      "PostGIS",
+      "pgvector",
+      "MongoDB"
+    ],
+    "tools": [
+      "Git",
+      "Drizzle",
+      "TypeORM",
+      "Prisma",
+      "Stripe",
+      "Clerk",
+      "Pusher",
+      "Persona (KYC)",
+      "Trigger.dev",
+      "Vercel Blob",
+      "Resend",
+      "Figma"
+    ],
+    "ai": [
+      "RAG",
+      "Agentic tool use",
+      "Hybrid search (pgvector + Postgres full-text)",
+      "Vercel AI SDK",
+      "LangChain (PGVectorStore)",
+      "Anthropic Claude",
+      "OpenAI (embeddings, GPT-4o-mini)",
+      "Google Gemini",
+      "Open Responses",
+      "Claude Code",
+      "GitHub Copilot"
+    ],
+    "notes": {
+      "es": "Python figura como lenguaje que usa; en este CV no hay un backend en Python en producción. La amplitud en AWS (S3, Lambda, EventBridge, VPC) viene de la certificación SAA-C03; la experiencia práctica en producción con AWS en este CV es EC2 (motor de Polymarket, plataforma de administración de SEM Nexus, YEYAR antes de su migración a Vercel), IAM y Secrets Manager.",
+      "en": "Python is listed as a language he uses; there is no production Python backend on this CV. AWS breadth (S3, Lambda, EventBridge, VPC) comes from the SAA-C03 certification; hands-on production AWS on this CV is EC2 (Polymarket engine, the SEM Nexus admin platform, YEYAR before its migration to Vercel), IAM and Secrets Manager."
+    }
+  },
+  "spokenLanguages": [
+    {
+      "language": {
+        "es": "Español",
+        "en": "Spanish"
+      },
+      "level": {
+        "es": "Nativo",
+        "en": "Native"
+      }
+    },
+    {
+      "language": {
+        "es": "Inglés",
+        "en": "English"
+      },
+      "level": "C2"
+    },
+    {
+      "language": {
+        "es": "Francés",
+        "en": "French"
+      },
+      "level": "B2"
+    }
+  ],
+  "honors": [
+    {
+      "es": "1er lugar, Programa de Fintech y Ciencia de Datos, IEB Madrid 2023",
+      "en": "1st place, Fintech & Data Science Program, IEB Madrid 2023"
+    }
+  ],
+  "interests": {
+    "es": [
+      "Gimnasio y calistenia",
+      "Natación",
+      "Senderismo",
+      "Boulder (escalada)",
+      "Ajedrez",
+      "Piano"
+    ],
+    "en": [
+      "Gym and calisthenics",
+      "Swimming",
+      "Hiking",
+      "Bouldering",
+      "Chess",
+      "Piano"
+    ]
+  },
+  "engineeringPractices": {
+    "es": "Pruebas unitarias y de integración con mocking (Jest y React Native Testing Library en las apps; este agente usa el test runner de Bun con un proveedor de modelo simulado y pruebas de contrato). CI en GitHub Actions con typecheck y pruebas por paquete. Preferencia por TypeScript estricto y entradas validadas por esquema (Zod; DTOs con whitelist en NestJS).",
+    "en": "Unit and integration tests with mocking (Jest and React Native Testing Library in the apps; this agent uses Bun's test runner with a mock model provider and contract tests). CI on GitHub Actions with typecheck and tests per package. Preference for strict TypeScript and schema-validated input (Zod; whitelisted DTOs in NestJS)."
+  }
+}
